@@ -1,12 +1,19 @@
-FROM circleci/node:latest-browsers
+FROM node:18-alpine
 
-WORKDIR /usr/src/app/
-USER root
-COPY package.json ./
-RUN yarn
+WORKDIR /app
 
-COPY ./ ./
+# 复制 package 文件
+COPY package*.json ./
 
-RUN npm run test:all
+# 安装依赖
+RUN npm install
 
-CMD ["npm", "run", "build"]
+# 复制应用代码
+COPY . .
+
+# 暴露端口
+EXPOSE 5173
+
+# 启动开发服务器
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+

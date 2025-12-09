@@ -1,5 +1,21 @@
 # sphinx-quant
 
+## 快速开始
+
+本项目使用 [uv](https://github.com/astral-sh/uv) 作为 Python 包管理工具。
+
+### 快速启动
+
+1. **安装 uv** (如果尚未安装):
+   - Windows: `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+   - Linux/macOS: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+2. **同步依赖并启动**:
+   - Windows: `.\scripts\dev-start.ps1`
+   - Linux/macOS: `./scripts/dev-start.sh`
+
+详细文档请查看：[快速启动指南](QUICKSTART.md) 或 [uv 使用文档](docs/guide/uv/README.md)
+
 ## 开发进度(暂停开发和更新)
 
 - [x] Circle Ci 自动化

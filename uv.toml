@@ -1,0 +1,8 @@
+# uv 配置文件
+# 注意: uv 的索引配置主要通过环境变量或命令行参数
+# 此文件作为参考，实际使用时可能需要通过环境变量配置
+
+# 配置额外的包索引源可以通过以下方式：
+# 1. 环境变量: UV_INDEX_RQDATA_URL="https://rquser:ricequant99@py.ricequant.com/simple"
+# 2. 命令行参数: uv pip install --index-url <url> <package>
+# 3. 在 pyproject.toml 中使用 URL 直接指定包源

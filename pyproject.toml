@@ -1,0 +1,27 @@
+[project]
+name = "sphinx-quant"
+version = "0.1.0"
+description = "Sphinx Quant - Quantitative Trading Platform"
+requires-python = ">=3.10"
+dependencies = [
+    # FastAPI 后端依赖（在 backend/requirements.txt 中）
+    # Vue3 前端依赖（在 frontend/package.json 中）
+    # 量化交易相关依赖
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "ta-lib",
+    "futu-api",
+    "tigeropen",
+    "rqdatac",
+    "vnpy @ git+https://github.com/vnpy/vnpy.git@master",
+    "requests",
+    "websocket-client",
+]
+
+[project.optional-dependencies]
+dev = ["pre-commit", "black"]
+production = [
+    "uwsgi", # 仅用于 Linux/Unix 生产环境，Windows 不支持
+]
